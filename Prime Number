@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<math.h>
+int checkprime(int n)
+{   
+    if(n==1||n==0)
+    {
+        return 0;
+    }
+    int flag=1;
+    for(int i=2;i<sqrt(n);i++)
+    {
+        if(n%i==0)
+        {
+            flag=0;
+            break;
+        }
+    }
+    if(flag==1)
+    {
+       return flag;
+    }
+   
+}
+void main()
+{
+    int n;
+    scanf("%d",&n);
+    int s=checkprime(n);
+    printf("%d",s);
+}
+
